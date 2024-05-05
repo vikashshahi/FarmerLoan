@@ -1,0 +1,46 @@
+<!-- ... (Your existing HTML code above) ... -->
+
+<!-- Start Loan Prediction Form -->
+<div class="container my-5">
+    <h2>Loan Repayment Prediction</h2>
+    <form id="loanPredictionForm" method="post">
+        <div class="form-group">
+            <label for="temperature">Temperature:</label>
+            <input type="number" class="form-control" id="temperature" name="temperature" required>
+        </div>
+        <div class="form-group">
+            <label for="rainfall">Rainfall:</label>
+            <input type="number" class="form-control" id="rainfall" name="rainfall" required>
+        </div>
+        <div class="form-group">
+            <label for="humidity">Humidity:</label>
+            <input type="number" class="form-control" id="humidity" name="humidity" required>
+        </div>
+        <div class="form-group">
+            <label for="credit_history">Credit History:</label>
+            <select class="form-control" id="credit_history" name="credit_history" required>
+                <option value="Good">Good</option>
+                <option value="Fair">Fair</option>
+                <option value="Excellent">Excellent</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="collateral">Collateral:</label>
+            <select class="form-control" id="collateral" name="collateral" required>
+                <option value="High">High</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+
+    {% if prediction_text %}
+    <div class="mt-4">
+        <h4>Prediction Result: {{ prediction_text }}</h4>
+    </div>
+    {% endif %}
+</div>
+<!-- End Loan Prediction Form -->
+
+<!-- ... (Your existing HTML code below) ... -->
